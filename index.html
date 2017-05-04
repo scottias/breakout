@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang = "en-US">
+<head>
+	<meta charset = "UTF-8">
+	<title> Breakout </title>
+	<link rel = "stylesheet" type = "text/css" href = "styles/game.css">
+</head>
+<body onload = "BreakoutGame.game.initialize();"">
+	<div id="game">
+
+		<div id="menu-screen" class="screen">
+			<h1 class="title">BREAKOUT!</h1>
+			<ul class="buttons">
+				<li><button id="new-game-button" class="button">New Game</button></li>
+				<li><button id="high-scores-button" class="button">High Scores</button></li>
+				<li><button id="credits-button" class="button">Credits</button></li>
+			</ul>
+		</div>
+
+		<div id="game-screen" class="screen">
+			<canvas id="game-canvas" width ="850" height ="650"></canvas>
+			<button id="game-back-button" class="button back-button  ">Exit</button>
+			<div id="score-input">
+				<span class = "label">Name: </span>
+				<input id = "name" type = "text" class = "input">
+				<button id="game-save-button" class="button">Save</button>
+			</div>
+		</div>
+
+		<div id="high-scores-screen" class="screen">
+			<div id="high-scores-area">
+				<h1 class = "title2">High Scores</h1>
+				<ul class = "text" id="places-list">
+					<li>1st</li>
+					<li>2nd</li>
+					<li>3rd</li>
+					<li>4th</li>
+					<li>5th</li>
+				</ul>
+				<ul class = "text" id="names-list"></ul>
+				<ul class = "text" id="high-scores-list"></ul>
+			</div>
+
+			<button id="high-scores-clear-button" class="button">Reset Scores</button>
+			<button id="high-scores-back-button" class="button back-button">Back</button>
+			<div class="clr"></div>
+		</div>
+
+		<div id="credits-screen" class="screen">
+			<div>
+				<h1 class = "title2">Credits</h1>
+				<p class="text">Created by Scott Sorensen</p>
+			</div>
+			<button id="credits-back-button" class="button back-button">Back</button>
+		</div>
+
+	</div>
+
+	<script src = "scripts/initialize.js"></script>
+	<script src = "scripts/random.js"></script>
+	<script src = "scripts/ParticleSystem.js"></script>
+	<script src = "scripts/render.js"></script>
+	<script src = "scripts/update.js"></script>
+	<script src = "scripts/play.js"></script>
+	<script src = "scripts/screens.js"></script>
+</body>
+</html>
